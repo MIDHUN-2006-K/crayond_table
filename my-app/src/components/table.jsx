@@ -17,6 +17,7 @@ import "../App.css";
 import maleImage from '../assets/george.jpeg'
 import femaleImage from '../assets/emilia.jpeg'
 import stevanImage from '../assets/stevan.jpeg'
+import PaginationComponenent from './pagination';
 
 const createData = (name, designation, department, signals, overall_performance, reportin_to, role, email, experience, status) => {
     return { name, designation, department, signals, overall_performance, reportin_to, role, email, experience, status };
@@ -474,15 +475,13 @@ function MyTable() {
                             ))}
                         </TableBody>
                     </Table>
-
-                    <TablePagination
-                        rowsPerPageOptions={[5, 10, 25]}
-                        component="div"
+                    <PaginationComponenent
                         count={rows.length}
                         page={page}
-                        onPageChange={handleChangePage}
                         rowsPerPage={rowPerPage}
+                        onPageChange={handleChangePage}
                         onRowsPerPageChange={handleRowsPerPage}
+                        rows={rows}
                     />
                 </div>
             </TableContainer>
