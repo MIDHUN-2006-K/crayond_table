@@ -14,6 +14,9 @@ import Switch from '@mui/material/Switch';
 import { TablePagination } from '@mui/material';
 import performanceImage from '../assets/performance.png';
 import "../App.css";
+import maleImage from '../assets/george.jpeg'
+import femaleImage from '../assets/emilia.jpeg'
+import stevanImage from '../assets/stevan.jpeg'
 
 const createData = (name, designation, department, signals, overall_performance, reportin_to, role, email, experience, status) => {
     return { name, designation, department, signals, overall_performance, reportin_to, role, email, experience, status };
@@ -21,7 +24,10 @@ const createData = (name, designation, department, signals, overall_performance,
 
 const rows = [
     createData(
-        'George Fernandes', 
+        {
+            image: maleImage,
+            name: 'George Fernandes'
+        },
         'Visual Designer', 
         'Design', 
         [{ color: '#007C32', letter: 'C' }, 
@@ -29,211 +35,355 @@ const rows = [
         { color: '#F2B824', letter: 'T' }, 
         { color: '#F2EB24', letter: 'D' }, 
         { color: '#DE1010', letter: 'U' }], 
-        performanceImage,
-        'Steven',
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
         'Employee',
         'george@gmail.com',
         '3 Yrs 4 Mon', 
-        'Active'),
+        'Active'
+    ),
 
-
-    createData('Emilia Clarke', 
+    createData(
+        {
+            image: femaleImage,
+            name: 'Emilia Clarke'
+        },
         'Software Engineer', 
         'Engineering', 
         [{ color: '#007C32', letter: 'C' }, 
-            { color: '#4C9E29', letter: 'E' }, 
-            { color: '#F2B824', letter: 'T' }, 
-            { color: '#F2EB24', letter: 'D' }, {
-            color: '#DE1010', letter: 'U' }],
-            performanceImage, 
-            'Stevan', 
-            'Manager',
-            'emilia@gmail.com',
-            '3 Yrs 2 Mon', 
-            'Active'),
-            createData(
-                'George Fernandes', 
-                'Visual Designer', 
-                'Design', 
-                [{ color: '#007C32', letter: 'C' }, 
-                { color: '#4C9E29', letter: 'E' }, 
-                { color: '#F2B824', letter: 'T' }, 
-                { color: '#F2EB24', letter: 'D' }, 
-                { color: '#DE1010', letter: 'U' }], 
-                performanceImage,
-                'Steven',
-                'Employee',
-                'george@gmail.com',
-                '3 Yrs 4 Mon', 
-                'Active'),
-        
-        
-            createData('Emilia Clarke', 
-                'Software Engineer', 
-                'Engineering', 
-                [{ color: '#007C32', letter: 'C' }, 
-                    { color: '#4C9E29', letter: 'E' }, 
-                    { color: '#F2B824', letter: 'T' }, 
-                    { color: '#F2EB24', letter: 'D' }, {
-                    color: '#DE1010', letter: 'U' }],
-                    performanceImage, 
-                    'Stevan', 
-                    'Manager',
-                    'emilia@gmail.com',
-                    '3 Yrs 2 Mon', 
-                    'Active'),createData(
-                        'George Fernandes', 
-                        'Visual Designer', 
-                        'Design', 
-                        [{ color: '#007C32', letter: 'C' }, 
-                        { color: '#4C9E29', letter: 'E' }, 
-                        { color: '#F2B824', letter: 'T' }, 
-                        { color: '#F2EB24', letter: 'D' }, 
-                        { color: '#DE1010', letter: 'U' }], 
-                        performanceImage,
-                        'Steven',
-                        'Employee',
-                        'george@gmail.com',
-                        '3 Yrs 4 Mon', 
-                        'Active'),
-                
-                
-                    createData('Emilia Clarke', 
-                        'Software Engineer', 
-                        'Engineering', 
-                        [{ color: '#007C32', letter: 'C' }, 
-                            { color: '#4C9E29', letter: 'E' }, 
-                            { color: '#F2B824', letter: 'T' }, 
-                            { color: '#F2EB24', letter: 'D' }, {
-                            color: '#DE1010', letter: 'U' }],
-                            performanceImage, 
-                            'Stevan', 
-                            'Manager',
-                            'emilia@gmail.com',
-                            '3 Yrs 2 Mon', 
-                            'Active'),createData(
-                                'George Fernandes', 
-                                'Visual Designer', 
-                                'Design', 
-                                [{ color: '#007C32', letter: 'C' }, 
-                                { color: '#4C9E29', letter: 'E' }, 
-                                { color: '#F2B824', letter: 'T' }, 
-                                { color: '#F2EB24', letter: 'D' }, 
-                                { color: '#DE1010', letter: 'U' }], 
-                                performanceImage,
-                                'Steven',
-                                'Employee',
-                                'george@gmail.com',
-                                '3 Yrs 4 Mon', 
-                                'Active'),
-                        
-                        
-                            createData('Emilia Clarke', 
-                                'Software Engineer', 
-                                'Engineering', 
-                                [{ color: '#007C32', letter: 'C' }, 
-                                    { color: '#4C9E29', letter: 'E' }, 
-                                    { color: '#F2B824', letter: 'T' }, 
-                                    { color: '#F2EB24', letter: 'D' }, {
-                                    color: '#DE1010', letter: 'U' }],
-                                    performanceImage, 
-                                    'Stevan', 
-                                    'Manager',
-                                    'emilia@gmail.com',
-                                    '3 Yrs 2 Mon', 
-                                    'Active'),createData(
-                                        'George Fernandes', 
-                                        'Visual Designer', 
-                                        'Design', 
-                                        [{ color: '#007C32', letter: 'C' }, 
-                                        { color: '#4C9E29', letter: 'E' }, 
-                                        { color: '#F2B824', letter: 'T' }, 
-                                        { color: '#F2EB24', letter: 'D' }, 
-                                        { color: '#DE1010', letter: 'U' }], 
-                                        performanceImage,
-                                        'Steven',
-                                        'Employee',
-                                        'george@gmail.com',
-                                        '3 Yrs 4 Mon', 
-                                        'Active'),
-                                
-                                
-                                    createData('Emilia Clarke', 
-                                        'Software Engineer', 
-                                        'Engineering', 
-                                        [{ color: '#007C32', letter: 'C' }, 
-                                            { color: '#4C9E29', letter: 'E' }, 
-                                            { color: '#F2B824', letter: 'T' }, 
-                                            { color: '#F2EB24', letter: 'D' }, {
-                                            color: '#DE1010', letter: 'U' }],
-                                            performanceImage, 
-                                            'Stevan', 
-                                            'Manager',
-                                            'emilia@gmail.com',
-                                            '3 Yrs 2 Mon', 
-                                            'Active'),createData(
-                                                'George Fernandes', 
-                                                'Visual Designer', 
-                                                'Design', 
-                                                [{ color: '#007C32', letter: 'C' }, 
-                                                { color: '#4C9E29', letter: 'E' }, 
-                                                { color: '#F2B824', letter: 'T' }, 
-                                                { color: '#F2EB24', letter: 'D' }, 
-                                                { color: '#DE1010', letter: 'U' }], 
-                                                performanceImage,
-                                                'Steven',
-                                                'Employee',
-                                                'george@gmail.com',
-                                                '3 Yrs 4 Mon', 
-                                                'Active'),
-                                        
-                                        
-                                            createData('Emilia Clarke', 
-                                                'Software Engineer', 
-                                                'Engineering', 
-                                                [{ color: '#007C32', letter: 'C' }, 
-                                                    { color: '#4C9E29', letter: 'E' }, 
-                                                    { color: '#F2B824', letter: 'T' }, 
-                                                    { color: '#F2EB24', letter: 'D' }, {
-                                                    color: '#DE1010', letter: 'U' }],
-                                                    performanceImage, 
-                                                    'Stevan', 
-                                                    'Manager',
-                                                    'emilia@gmail.com',
-                                                    '3 Yrs 2 Mon', 
-                                                    'Active'),createData(
-                                                        'George Fernandes', 
-                                                        'Visual Designer', 
-                                                        'Design', 
-                                                        [{ color: '#007C32', letter: 'C' }, 
-                                                        { color: '#4C9E29', letter: 'E' }, 
-                                                        { color: '#F2B824', letter: 'T' }, 
-                                                        { color: '#F2EB24', letter: 'D' }, 
-                                                        { color: '#DE1010', letter: 'U' }], 
-                                                        performanceImage,
-                                                        'Steven',
-                                                        'Employee',
-                                                        'george@gmail.com',
-                                                        '3 Yrs 4 Mon', 
-                                                        'Active'),
-                                                
-                                                
-                                                    createData('Emilia Clarke', 
-                                                        'Software Engineer', 
-                                                        'Engineering', 
-                                                        [{ color: '#007C32', letter: 'C' }, 
-                                                            { color: '#4C9E29', letter: 'E' }, 
-                                                            { color: '#F2B824', letter: 'T' }, 
-                                                            { color: '#F2EB24', letter: 'D' }, {
-                                                            color: '#DE1010', letter: 'U' }],
-                                                            performanceImage, 
-                                                            'Stevan', 
-                                                            'Manager',
-                                                            'emilia@gmail.com',
-                                                            '3 Yrs 2 Mon', 
-                                                            'Active'),
-];
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }],
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Manager',
+        'emilia@gmail.com',
+        '3 Yrs 2 Mon', 
+        'Active'
+    ),
+    createData(
+        {
+            image: maleImage,
+            name: 'George Fernandes'
+        },
+        'Visual Designer', 
+        'Design', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }], 
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Employee',
+        'george@gmail.com',
+        '3 Yrs 4 Mon', 
+        'Active'
+    ),
 
+    createData(
+        {
+            image: femaleImage,
+            name: 'Emilia Clarke'
+        },
+        'Software Engineer', 
+        'Engineering', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }],
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Manager',
+        'emilia@gmail.com',
+        '3 Yrs 2 Mon', 
+        'Active'
+    ),
+    createData(
+        {
+            image: maleImage,
+            name: 'George Fernandes'
+        },
+        'Visual Designer', 
+        'Design', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }], 
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Employee',
+        'george@gmail.com',
+        '3 Yrs 4 Mon', 
+        'Active'
+    ),
+
+    createData(
+        {
+            image: femaleImage,
+            name: 'Emilia Clarke'
+        },
+        'Software Engineer', 
+        'Engineering', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }],
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Manager',
+        'emilia@gmail.com',
+        '3 Yrs 2 Mon', 
+        'Active'
+    ),
+    createData(
+        {
+            image: maleImage,
+            name: 'George Fernandes'
+        },
+        'Visual Designer', 
+        'Design', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }], 
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Employee',
+        'george@gmail.com',
+        '3 Yrs 4 Mon', 
+        'Active'
+    ),
+
+    createData(
+        {
+            image: femaleImage,
+            name: 'Emilia Clarke'
+        },
+        'Software Engineer', 
+        'Engineering', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }],
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Manager',
+        'emilia@gmail.com',
+        '3 Yrs 2 Mon', 
+        'Active'
+    ),
+    createData(
+        {
+            image: maleImage,
+            name: 'George Fernandes'
+        },
+        'Visual Designer', 
+        'Design', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }], 
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Employee',
+        'george@gmail.com',
+        '3 Yrs 4 Mon', 
+        'Active'
+    ),
+
+    createData(
+        {
+            image: femaleImage,
+            name: 'Emilia Clarke'
+        },
+        'Software Engineer', 
+        'Engineering', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }],
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Manager',
+        'emilia@gmail.com',
+        '3 Yrs 2 Mon', 
+        'Active'
+    ),
+    createData(
+        {
+            image: maleImage,
+            name: 'George Fernandes'
+        },
+        'Visual Designer', 
+        'Design', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }], 
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Employee',
+        'george@gmail.com',
+        '3 Yrs 4 Mon', 
+        'Active'
+    ),
+
+    createData(
+        {
+            image: femaleImage,
+            name: 'Emilia Clarke'
+        },
+        'Software Engineer', 
+        'Engineering', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }],
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Manager',
+        'emilia@gmail.com',
+        '3 Yrs 2 Mon', 
+        'Active'
+    ),
+    createData(
+        {
+            image: maleImage,
+            name: 'George Fernandes'
+        },
+        'Visual Designer', 
+        'Design', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }], 
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Employee',
+        'george@gmail.com',
+        '3 Yrs 4 Mon', 
+        'Active'
+    ),
+
+    createData(
+        {
+            image: femaleImage,
+            name: 'Emilia Clarke'
+        },
+        'Software Engineer', 
+        'Engineering', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }],
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Manager',
+        'emilia@gmail.com',
+        '3 Yrs 2 Mon', 
+        'Active'
+    ),
+    createData(
+        {
+            image: maleImage,
+            name: 'George Fernandes'
+        },
+        'Visual Designer', 
+        'Design', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }], 
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Employee',
+        'george@gmail.com',
+        '3 Yrs 4 Mon', 
+        'Active'
+    ),
+
+    createData(
+        {
+            image: femaleImage,
+            name: 'Emilia Clarke'
+        },
+        'Software Engineer', 
+        'Engineering', 
+        [{ color: '#007C32', letter: 'C' }, 
+        { color: '#4C9E29', letter: 'E' }, 
+        { color: '#F2B824', letter: 'T' }, 
+        { color: '#F2EB24', letter: 'D' }, 
+        { color: '#DE1010', letter: 'U' }],
+        performanceImage, 
+        {
+            image1: stevanImage,
+            name:'Stevan'
+        },
+        'Manager',
+        'emilia@gmail.com',
+        '3 Yrs 2 Mon', 
+        'Active'
+    ),
+];
 
 const theme = createTheme({
     typography: {
@@ -267,24 +417,29 @@ function MyTable() {
                 <div style={{ overflowX: 'auto' }}>
                     <Table stickyHeader>
                         <TableHead>
-                            <TableRow>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Name</TableCell>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Designation</TableCell>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Department</TableCell>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Signals</TableCell>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Overall Performance</TableCell>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Reporting To</TableCell>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Role</TableCell>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Email</TableCell>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Experience</TableCell>
-                                <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Status</TableCell>
-                                <TableCell align='center' style={{ position: 'sticky', right: 0, background: 'white', zIndex: 1, fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Actions</TableCell>
-                            </TableRow>
+                        <TableRow>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Name</TableCell>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Designation</TableCell>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Department</TableCell>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Signals</TableCell>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Overall Performance</TableCell>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Reporting To</TableCell>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Role</TableCell>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Email</TableCell>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Experience</TableCell>
+                            <TableCell align='center' sx={{ fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Status</TableCell>
+                            <TableCell align='center' style={{ position: 'sticky', right: 0, background: 'white', zIndex: 1, fontWeight: 'medium', fontSize: '18px', lineHeight: '27px', color: "#353448" }}>Actions</TableCell>
+                        </TableRow>
                         </TableHead>
                         <TableBody>
                             {rows.slice(page * rowPerPage, page * rowPerPage + rowPerPage).map((row, index) => (
                                 <TableRow key={index}>
-                                    <TableCell align='left'>{row.name}</TableCell>
+                                    <TableCell align="left">
+                                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                                            <Avatar src={row.name.image} alt={row.name.name} sx={{ marginRight: '10px' }} />
+                                            <Typography sx={{width:"50px",fontSize:"14px"}}>{row.name.name}</Typography>
+                                        </div>
+                                    </TableCell>
                                     <TableCell align="center">{row.designation}</TableCell>
                                     <TableCell align="center">{row.department}</TableCell>
                                     <TableCell align="center">
@@ -297,7 +452,12 @@ function MyTable() {
                                     <TableCell align="center">
                                         <img src={row.overall_performance} alt="Performance" style={{ width: 48, height: 32 }} />
                                     </TableCell>
-                                    <TableCell align="center">{row.reportin_to}</TableCell>
+                                    <TableCell align="left">
+                                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                                            <Avatar src={row.reportin_to.image1} alt={row.reportin_to.name} sx={{ marginRight: '10px' }} />
+                                            <Typography sx={{width:"50px",fontSize:"14px"}}>{row.reportin_to.name}</Typography>
+                                        </div>
+                                    </TableCell>
                                     <TableCell align="center">{row.role}</TableCell>
                                     <TableCell align="center">{row.email}</TableCell>
                                     <TableCell align="center">{row.experience}</TableCell>
